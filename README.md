@@ -7,9 +7,6 @@
 
 <br>
 
-我是 周沫凡, [莫烦Python](https://mofanpy.com/) 只是谐音, 我喜欢制作,
-分享所学的东西, 所以你能在这里找到很多有用的东西, 少走弯路. 你能在[这里](https://mofanpy.com/about/)找到关于我的所有东西.
-
 ## 这个 Python tutorial 的一些内容:
 
 * [Python 基础](https://mofanpy.com/tutorials/python-basic/)
