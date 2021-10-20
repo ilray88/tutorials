@@ -40,7 +40,7 @@ b = tf.Variable(np.arange(3).reshape((1, 3)), dtype=tf.float32, name="biases")
 
 saver = tf.train.Saver()
 with tf.Session() as sess:
-    saver.restore(sess, "my_net/save_net.ckpt")
+    saver.restore(sess, r"D:\0ilraypan\git\tutorials\tensorflowTUT\save_net.ckpt")
     print("weights:", sess.run(W))
     print("biases:", sess.run(b))
 

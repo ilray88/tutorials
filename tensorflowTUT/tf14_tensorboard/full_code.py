@@ -8,7 +8,8 @@ Please note, this code is only for python 3+. If you are using python 2+, please
 """
 from __future__ import print_function
 import tensorflow as tf
-
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 def add_layer(inputs, in_size, out_size, activation_function=None):
     # add one more layer and return the output of this layer
