@@ -20,7 +20,7 @@ unseen = set([base_url])
 
 
 def parse(html):
-    soup = BeautifulSoup(html, 'lxml')
+    soup = BeautifulSoup(html, 'html.parser')
     urls = soup.find_all('a', {"href": re.compile('^/.+?/$')})
     title = soup.find('h1').get_text().strip()
     page_urls = set([urljoin(base_url, url['href']) for url in urls])
