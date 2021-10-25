@@ -3,7 +3,9 @@ from bs4 import BeautifulSoup
 import multiprocessing as mp
 import re
 import time
-
+import os
+os.environ["http_proxy"] = "http://192.168.5.1:7890"
+os.environ["https_proxy"] = "http://192.168.5.1:7890"
 
 def crawl(url):
     response = urlopen(url)
@@ -12,7 +14,7 @@ def crawl(url):
 
 
 def parse(html):
-    soup = BeautifulSoup(html, 'lxml')
+    soup = BeautifulSoup(html, 'html.parser')
     urls = soup.find_all('a', {"href": re.compile('^/.+?/$')})
     title = soup.find('h1').get_text().strip()
     page_urls = set([urljoin(base_url, url['href']) for url in urls])   # remove duplication
