@@ -1,10 +1,12 @@
 import scrapy
-
+import os
+os.environ["http_proxy"] = "http://192.168.5.1:7890"
+os.environ["https_proxy"] = "http://192.168.5.1:7890"
 
 class MofanSpider(scrapy.Spider):
     name = "mofan"
     start_urls = [
-        'https://mofanpy.com/',
+        'https://book.douban.com/',
     ]
     # unseen = set()
     # seen = set()      # we don't need these two as scrapy will deal with them automatically
